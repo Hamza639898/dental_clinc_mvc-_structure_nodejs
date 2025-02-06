@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users - Dental Clinic</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Include FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="sidebar">
+    <!-- Navigation Menu -->
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patients.html">Patients</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="appointments.html">Appointments</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="#" id="logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <h2>Users</h2>
+    <!-- Only admin is allowed to add a new user -->
+    <button class="add-btn" onclick="openUserForm()">Add User</button>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- User data will be loaded here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add/Edit User Modal -->
+  <div id="userForm" class="modal">
+    <div class="modal-content">
+      <h3>Add/Edit User</h3>
+      <input type="hidden" id="userId">
+      <input type="text" id="userName" placeholder="Name">
+      <input type="email" id="userEmail" placeholder="Email">
+      <input type="password" id="userPassword" placeholder="Password">
+      <select id="userRole">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button onclick="saveUser()">Save</button>
+      <button onclick="closeUserForm()">Cancel</button>
+    </div>
+  </div>
+  <script src="js/users.js"></script>
+</body>
+</html>

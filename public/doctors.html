@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctors - Dental Clinic</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Include FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="sidebar">
+    <!-- Navigation Menu -->
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patients.html">Patients</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="appointments.html">Appointments</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="#" id="logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <h2>Doctors</h2>
+    <button class="add-btn" onclick="openDoctorForm()">Add Doctor</button>
+    <table id="doctorsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Specialty</th>
+          <th>Contact</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Doctors will be loaded here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add/Edit Doctor Modal -->
+  <div id="doctorForm" class="modal">
+    <div class="modal-content">
+      <h3>Add/Edit Doctor</h3>
+      <input type="hidden" id="doctorId">
+      <input type="text" id="doctorName" placeholder="Name">
+      <input type="text" id="doctorSpecialty" placeholder="Specialty">
+      <input type="text" id="doctorContact" placeholder="Contact">
+      <button onclick="saveDoctor()">Save</button>
+      <button onclick="closeDoctorForm()">Cancel</button>
+    </div>
+  </div>
+  <script src="js/doctors.js"></script>
+</body>
+</html>
