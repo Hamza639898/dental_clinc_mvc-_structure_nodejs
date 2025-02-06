@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Dental Clinic</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="dashboard.html">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="patients.html">
+          <i class="fas fa-user-injured"></i>
+          Patients
+        </a>
+      </li>
+      <li>
+        <a href="doctors.html">
+          <i class="fas fa-user-md"></i>
+          Doctors
+        </a>
+      </li>
+      <li>
+        <a href="appointments.html">
+          <i class="fas fa-calendar-check"></i>
+          Appointments
+        </a>
+      </li>
+      <li>
+        <a href="users.html">
+          <i class="fas fa-users"></i>
+          Users
+        </a>
+      </li>
+      <li>
+        <a href="#" id="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <h2>Dashboard</h2>
+    <div class="cards">
+      <div class="card">
+        <h3 id="totalPatients">0</h3>
+        <p>Patients</p>
+      </div>
+      <div class="card">
+        <h3 id="totalDoctors">0</h3>
+        <p>Doctors</p>
+      </div>
+      <div class="card">
+        <h3 id="totalAppointments">0</h3>
+        <p>Appointments</p>
+      </div>
+      <div class="card">
+        <h3 id="totalUsers">0</h3>
+        <p>Users</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

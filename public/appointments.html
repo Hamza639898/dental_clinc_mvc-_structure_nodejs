@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointments - Dental Clinic</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Include FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="sidebar">
+    <!-- Navigation menu -->
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patients.html">Patients</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="appointments.html">Appointments</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="#" id="logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <h2>Appointments</h2>
+    <button class="add-btn" onclick="openAppointmentForm()">Add Appointment</button>
+    <table id="appointmentsTable">
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Appointment Date</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Appointment data will be loaded here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add/Edit Appointment Modal -->
+  <div id="appointmentForm" class="modal">
+    <div class="modal-content">
+      <h3>Add/Edit Appointment</h3>
+      <input type="hidden" id="appointmentId">
+      <!-- Combo box for selecting patient -->
+      <label for="appointmentPatient">Patient:</label>
+      <select id="appointmentPatient"></select>
+      <!-- Combo box for selecting doctor -->
+      <label for="appointmentDoctor">Doctor:</label>
+      <select id="appointmentDoctor"></select>
+      <label for="appointmentDate">Appointment Date:</label>
+      <input type="datetime-local" id="appointmentDate">
+      <label for="appointmentDesc">Description:</label>
+      <input type="text" id="appointmentDesc" placeholder="Description">
+      <button onclick="saveAppointment()">Save</button>
+      <button onclick="closeAppointmentForm()">Cancel</button>
+    </div>
+  </div>
+  <script src="js/appointments.js"></script>
+</body>
+</html>
